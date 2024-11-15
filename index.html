@@ -1,0 +1,1271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Cairo Library | Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="Home.html"> <strong> Cairo Library </strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        
+    </nav>
+      
+
+    <div class="row">
+      <ul class="nav hnav flex-column nav-pills col-2 navbar-success" id="myTab" role="tablist">
+        
+        <li class="nav-item ">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Collections</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#nprofile" role="tab" aria-controls="profile" aria-selected="false">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="messages-tab" data-toggle="tab" href="#nmessages" role="tab" aria-controls="messages" aria-selected="false">Visitors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Employees</a>
+        </li>
+      </ul>
+      
+      <!-- Tab panes -->
+      <div class="tab-content page-body col-10">
+        <!------collections------>
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#nhome" role="tab" aria-controls="home" aria-selected="true">Books</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Periodicals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">References</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+
+                <!------Books------>
+                <div class="tab-pane fade show active" id="nhome" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container">
+                      <h1 class="display-3"><strong> Books </strong></h1>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">Borrowed (Daily)</p>
+                                            <p class="amount">5-20 Books</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">New (weekly)</p>
+                                            <p class="amount">0-10</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">Owened </p>
+                                            <p class="amount">45.000 Books</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class=" t-container">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn table-btn btn-primary" data-toggle="modal" data-target="#Nbook">
+                                Add A New Item
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="Nbook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                              <div class="form-group col-md-6">
+                                                <label for="inputEmail4">Name</label>
+                                                <input type="text" class="form-control" id="inputEmail4" placeholder="Book's Name">
+                                              </div>
+                                              <div class="form-group col-md-6">
+                                                <label for="inputPassword4">ID</label>
+                                                <input type="text" class="form-control" id="inputPassword4" placeholder="Books's ID">
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="inputAddress">DDC</label>
+                                              <input type="text" class="form-control" id="inputAddress" placeholder="123">
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="inputAddress2">Tags</label>
+                                              <input type="text" class="form-control" id="inputAddress2" placeholder="#Apartment, #Chemistry, #Religion">
+                                            </div>
+                                            <div class="form-row">
+                                              <div class="form-group col-md-6">
+                                                <label for="inputCity">Writer</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                              </div>
+                                              <div class="form-group col-md-6">
+                                                <label for="inputState">Stat</label>
+                                                <select id="inputState" class="form-control">
+                                                  <option selected>Writer</option>
+                                                  <option>distributor</option>
+                                                  <option>Translator</option>
+                                                  <option>Editor</option>
+                                                </select>
+                                              </div>
+                                              
+                                            </div>
+                                            <div class="form-group">
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                <label class="form-check-label" for="gridCheck">
+                                                  Data Checked
+                                                </label>
+                                              </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        
+                            <table class="table table-bordered table-light" >
+                              <thead class="thead-light">
+                              <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">DDC</th>
+                                  <th scope="col">Tags</th>
+                                  <th scope="col">Responsiple | Stat</th>
+                                  <th scope="col">...</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">3</th>
+                                  <td>Larry the Bird</td>
+                                  <td>Thornton</td>
+                                  <td>@twitter</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              </tbody>
+                        </table>
+
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+
+                       </div>
+                    </div>
+                    
+                </div>
+
+                <!------Periodicals------>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    
+                    <div class="container">
+                      <h1 class="display-3"><strong> Periodicals </strong></h1>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">New (Daily)</p>
+                                            <p class="amount">10-25 Periodicals</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">The Most Used (MONTHLY)</p>
+                                            <p class="amount">CNN</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">Owened </p>
+                                            <p class="amount">270.250 Perios</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                       <div class=" t-container">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn table-btn btn-primary" data-toggle="modal" data-target="#NPeriodicals">
+                                Add A New Item
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="NPeriodicals" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Name</label>
+                                            <input type="text" class="form-control" id="inputEmail4" placeholder="Book's Name">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">ID</label>
+                                            <input type="text" class="form-control" id="inputPassword4" placeholder="Book's ID">
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress">DDC</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="123">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress2">Tags</label>
+                                          <input type="text" class="form-control" id="inputAddress2" placeholder="#Apartment, #Chemistry, #Religion">
+                                        </div>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputCity">Writer</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputState">Stat</label>
+                                            <select id="inputState" class="form-control">
+                                              <option selected>Writer</option>
+                                              <option>distributor</option>
+                                              <option>Translator</option>
+                                              <option>Editor</option>
+                                            </select>
+                                          </div>
+                                          
+                                        </div>
+                                        <div class="form-group">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                              Data Checked
+                                            </label>
+                                          </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        
+                            <table class="table table-bordered table-light" >
+                              <thead class="thead-light">
+                              <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">DDC</th>
+                                  <th scope="col">Tags</th>
+                                  <th scope="col">Responsple | Stat</th>
+                                  <th scope="col">...</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">3</th>
+                                  <td>Larry the Bird</td>
+                                  <td>Thornton</td>
+                                  <td>@twitter</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              </tbody>
+                        </table>
+
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+
+                       </div>
+
+                    </div>
+                </div>
+
+                <!------References------>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    
+                    <div class="container">
+                      <h1 class="display-3"><strong> References </strong></h1>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">Owened </p>
+                                            <p class="amount">250 References</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">Most Used (MONTHLY)</p>
+                                            <p class="amount">Eng-Fra Dictionary</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm">
+                                <div class="container my-5 ">
+                                    <div class="earnings-card">
+                                        <div>
+                                            <p class="text-muted">New (MONTHLY)</p>
+                                            <p class="amount">0-5 References</p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class=" t-container">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn table-btn btn-primary" data-toggle="modal" data-target="#NReference">
+                                Add A New Item
+                            </button>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="NReference" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <form>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputEmail4">Name</label>
+                                            <input type="text" class="form-control" id="inputEmail4" placeholder="Book's Name">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputPassword4">ID</label>
+                                            <input type="text" class="form-control" id="inputPassword4" placeholder="Book's ID">
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress">DDC</label>
+                                          <input type="text" class="form-control" id="inputAddress" placeholder="123">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="inputAddress2">Tags</label>
+                                          <input type="text" class="form-control" id="inputAddress2" placeholder="#Apartment, #Chemistry, #Religion">
+                                        </div>
+                                        <div class="form-row">
+                                          <div class="form-group col-md-6">
+                                            <label for="inputCity">Writer</label>
+                                            <input type="text" class="form-control" id="inputCity">
+                                          </div>
+                                          <div class="form-group col-md-6">
+                                            <label for="inputState">Stat</label>
+                                            <select id="inputState" class="form-control">
+                                              <option selected>Writer</option>
+                                              <option>distributor</option>
+                                              <option>Translator</option>
+                                              <option>Editor</option>
+                                            </select>
+                                          </div>
+                                          
+                                        </div>
+                                        <div class="form-group">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                              Data Checked
+                                            </label>
+                                          </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        
+                            <table class="table table-bordered table-light" >
+                              <thead class="thead-light">
+                              <tr>
+                                  <th scope="col">#</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">ID</th>
+                                  <th scope="col">DDC</th>
+                                  <th scope="col">Tags</th>
+                                  <th scope="col">Responsple | Stat</th>
+                                  <th scope="col">...</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mark</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">2</th>
+                                  <td>Jacob</td>
+                                  <td>Thornton</td>
+                                  <td>@fat</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">3</th>
+                                  <td>Larry the Bird</td>
+                                  <td>Thornton</td>
+                                  <td>@twitter</td>
+                                  <td>Otto</td>
+                                  <td>@mdo</td>
+                                  <td>
+                                    <!-- Both Buttons in One Cell -->
+                                    <button class="btn btn-danger btn-sm">Delete</button>
+                                    <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                                  </td>
+                              </tr>
+                              </tbody>
+                        </table>
+                          <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                              </li>
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+
+                       </div>
+                    </div>
+                </div>
+                
+              </div>
+        </div>
+
+        <!-----Members----->
+        <div class="tab-pane" id="nprofile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <div class="container">
+              <h1 class="display-3"><strong> Members </strong></h1>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Attendants (MONTHLY) </p>
+                                    <p class="amount">60% Members </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Today's Attendants</p>
+                                    <p class="amount">350 Member</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Today's New Members</p>
+                                    <p class="amount">10 Members</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class=" t-container">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn table-btn btn-primary" data-toggle="modal" data-target="#Nmember">
+                        Add A New Item
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="Nmember" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Name</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder=" Name">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputPassword4">ID</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder=" ID">
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                  <label for="inputAddress2">Address</label>
+                                  <input type="text" class="form-control" id="inputAddress2" placeholder="34G/5th.st./cairo">
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputCity">Jop</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputState">Stat</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Student</option>
+                                      <option>Unemployed</option>
+                                      <option>Employed</option>
+                                      
+                                    </select>
+                                  </div>
+                                  
+                                </div>
+                                <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Data Checked
+                                    </label>
+                                  </div>
+                                </div>
+                            </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                
+                    <table class="table table-bordered table-light" >
+                      <thead class="thead-light">
+                      <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">Code</th>
+                          <th scope="col">Address</th>
+                          <th scope="col">Stat</th>
+                          <th scope="col">...</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                      </tr>
+                      <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                      </tr>
+                      <tr>
+                          <th scope="row">3</th>
+                          <td>Larry the Bird</td>
+                          <td>Thornton</td>
+                          <td>@twitter</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                      </tr>
+                      </tbody>
+                </table>
+
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+
+               </div>
+            </div>
+
+        </div>
+
+        <!-----Visitors----->
+        <div class="tab-pane" id="nmessages" role="tabpanel" aria-labelledby="messages-tab">
+            <div class="container">
+              <h1 class="display-3"><strong> Visitors </strong></h1>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Today's Visitors </p>
+                                    <p class="amount">120 Visitor</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Average Attendants (MONTHLY)</p>
+                                    <p class="amount">2000 Visitor</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Return Rate</p>
+                                    <p class="amount">30%</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class=" t-container">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn table-btn btn-primary" data-toggle="modal" data-target="#NVisitor">
+                        Add A New Item
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="NVisitor" tabindex="-1" role="dialog" aria-labelledby="Nvisitor" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="Nvisitor">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Name</label>
+                                    <input type="text" class="form-control" id="inputEmail4" placeholder=" Name">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputPassword4">ID</label>
+                                    <input type="text" class="form-control" id="inputPassword4" placeholder=" ID">
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAddress">Date/time</label>
+                                  <input type="datetime" class="form-control" id="inputAddress" placeholder="123">
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAddress2">Address</label>
+                                  <input type="text" class="form-control" id="inputAddress2" placeholder="34G/5th.st./cairo">
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputCity">Jop</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputState">Stat</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Student</option>
+                                      <option>Unemployed</option>
+                                      <option>Employed</option>
+                                      
+                                    </select>
+                                  </div>
+                                  
+                                </div>
+                                <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Data Checked
+                                    </label>
+                                  </div>
+                                </div>
+                            </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                
+                    <table class="table table-bordered table-light" >
+                      <thead class="thead-light">
+                      <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">ID</th>
+                          <th scope="col">Date/time</th>
+                          <th scope="col">Address</th>
+                          <th scope="col">Stat</th>
+                          <th scope="col">...</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                      </tr>
+                      <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                      </tr>
+                      <tr>
+                          <th scope="row">3</th>
+                          <td>Larry the Bird</td>
+                          <td>Thornton</td>
+                          <td>@twitter</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                      </tr>
+                      </tbody>
+                </table>
+
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+
+               </div>
+            </div>
+        </div>
+
+        <!-----Employees----->
+        <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+
+            <div class="container">
+              <h1 class="display-3"><strong> Employees </strong></h1>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Attendants Rate (MONTHLY) </p>
+                                    <p class="amount">89% Employees</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">Target Reached (MONTHLY)</p>
+                                    <p class="amount">75% In-Progress</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="container my-5 ">
+                            <div class="earnings-card">
+                                <div>
+                                    <p class="text-muted">New Employees (Jul/Dec)</p>
+                                    <p class="amount"> 2 Employees</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class=" t-container">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn table-btn btn-primary" data-toggle="modal" data-target="#NEmployee">
+                      Add A New Item
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="NEmployee" tabindex="-1" role="dialog" aria-labelledby="Nvisitor" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                          <h5 class="modal-title" id="Nvisitor">Modal title</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                          </div>
+                          <div class="modal-body">
+                            <form>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="inputEmail4">Name</label>
+                                  <input type="text" class="form-control" id="inputEmail4" placeholder=" Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="inputPassword4">ID</label>
+                                  <input type="text" class="form-control" id="inputPassword4" placeholder=" ID">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="inputAddress">Stat</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Librarian Assistant">
+                              </div>
+                              <div class="form-group">
+                                <label for="inputAddress2">Address</label>
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="34G/5th.st./cairo">
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="Email">Email</label>
+                                  <input type="email" class="form-control" id="Email" placeholder=" Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="Password">Password</label>
+                                  <input type="password" class="form-control" id="Password" placeholder=" password">
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                                  <label class="form-check-label" for="gridCheck">
+                                    Data Checked
+                                  </label>
+                                </div>
+                              </div>
+                          </form>
+                          </div>
+                          <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+              
+                  <table class="table table-bordered table-light" >
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Stat</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">...</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                              <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry the Bird</td>
+                        <td>Thornton</td>
+                        <td>@twitter</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>
+                            <!-- Both Buttons in One Cell -->
+                          <button class="btn btn-danger btn-sm">Delete</button>
+                          <button class="btn btn-primary btn-sm ml-2">Edit</button>
+                        </td>
+                    </tr>
+                    </tbody>
+              </table>
+
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                          <span aria-hidden="true">&laquo;</span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                          <span aria-hidden="true">&raquo;</span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+
+               </div>
+            </div>
+
+        </div>
+        
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

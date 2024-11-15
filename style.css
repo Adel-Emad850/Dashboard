@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0;
+
+}
+body{
+    box-sizing: border-box;
+    max-width: 100%;
+
+    overflow-x: hidden !important;
+}
+div img{
+    width: 100%;
+}
+.nav-pills{
+    
+    background-color: #FFD45A;
+    height: 97vh;
+    li{
+        
+        margin-left: 10px;
+        margin-right: -14px;
+        a{
+            color: #2C3959;
+        }
+    }
+}
+
+.jumbotron{
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+}
+
+.hnav a{
+    font-size: 1.2rem;
+}
+
+.tab-content{
+    background-color: #fff3dd;
+    width: 100%;
+
+}
+.tab-content .tab-content{
+    width:100%;
+}
+.tab-pane .nav{
+    margin-left: -1%;
+    background-color: #FFD45A;
+}
+.earnings-card {
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    border-left: 5px solid #00BBF0;
+}
+.earnings-card .text-muted {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.earnings-card .amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+.earnings-card .icon {
+    font-size: 40px;
+    color: #ced4da;
+    margin-right: 10px;
+}
+.t-container{
+    background-color: #ffffff;
+    padding-inline: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.table-btn{
+   float: right;
+   margin-bottom: 5px;
+}
